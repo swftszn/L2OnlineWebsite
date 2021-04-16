@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Josefin+Sans&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* slider */
+#slider1 {
+  overflow: hidden;
+}
+
+#slider1 figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider1 figure img {
+  width: 20%;
+  float: left;
+}
+/* move the slider */
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+/* navbar main, width 100% so its always across screen, position sticky so it stays on top */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px 0;
+  box-shadow: 0 2px 5px #d9d9d9;
+  font-family: 'Open Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+/* navbar text design so it has no underline*/
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+/* navbar inline */
+nav ul li {
+  display: inline-block;
+}
+/* navbar text style */
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin: 0 10px;
+}
+/* navbar transition time  */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+/* navbar hover color */
+nav ul li a:hover {
+  color:#0072CE;
+}
+/* navbar positioning so it can be moved*/
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+/* navbar blue underline animation */
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #0072CE;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+/* top container, contains products */
+.container {
+  width: 100%;
+  background-color: #fff;
+  display:inline-block;
+}
+
+.row2{
+  margin-top: 150px;
+  text-align: center;
+}
+/* text in container */
+.col-1 h1{
+  font-family: Josefin Sans;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #0072CE;
+}
+
+.col-1 h2 {
+  color: #1F1F1F;
+  font-family: Quicksand;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.col-1 p {
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #aaa;
+}
+/* container that contains products */
+.container2 {
+  margin-top: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+/* card itself */
+.card {
+  width: 320px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 4rem 2rem 0;
+  color: white;
+  overflow-y: hidden;
+  margin: 20px;
+}
+/* card image */
+.card__img {
+  position: absolute;
+  width: 260px;
+  filter: drop-shadow(5px 10px 15px rgba(8,9,13,.4));
+  margin: 0;
+}
+/* card positions */
+.card .mk11 {
+  margin-top: -4em;
+}
+
+.card .cod {
+  margin-top: -4rem;
+}
+
+.card .creed {
+  margin-top: -4rem;
+}
+
+.card .watchdog {
+  margin-top: -7em;
+}
+
+.card .witcher {
+  margin-top: -4em;
+  margin-left: 2em;
+  transform: scale(1.1);
+}
+
+.card .got {
+  margin-top: 1em;
+  margin-right: 2em;
+  transform: scale(1.4);
+}
+
+/* card info */
+.card__data {
+  transform: translateY(13.2rem);
+  text-align: center;
+}
+
+.card__title {
+  font-family: Lexend;
+  font-size: 1.5rem;
+  color: #0072CE;
+  margin-bottom: .5rem;
+}
+/* card price */
+.card__preci {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: black;
+  font-family: Lexend;
+}
+
+.card__description {
+  font-size: .875rem;
+  text-align: initial;
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  color: black;
+  font-family: Lexend;
+  font-weight: lighter;
+}
+
+.card__button {
+  display: block;
+  width: max-content;
+  padding: 1.125rem 2rem;
+  background-color: #0072CE;
+  color: white;
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: .2s;
+  opacity: 0;
+  text-decoration: none;
+  font-family: Lexend;
+}
+
+.card__button:hover {
+  box-shadow: 0 5px 40px rgba(8,9,13,.4);
+}
+
+.card__img, 
+.card__data, 
+.card__title, 
+.card__preci, 
+.card__description {
+  transition: .5s;
+}
+
+/* hover card effect rem so size doesn't change in browsers*/
+.card:hover .card__img {
+  transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+  opacity: .9;
+}
+
+.card:hover .card__data {
+  transform: translateY(4.8rem);
+}
+
+.card:hover .card__title {
+  transform: translateX(-2.3rem);
+  margin-bottom: 0;
+}
+
+.card:hover .card__preci {
+  transform: translateX(-6.8rem);
+}
+
+.card:hover .card__description, 
+.card:hover .card__button {
+  transition-delay: .2s;
+  opacity: 1;
+}
+/* card ends */
+.row{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+/* container that contains carousel */
+.container3 {
+  background-color: #282829;
+  width: 100%;
+  height: 900px;
+  display:inline-block;
+}
+
+.row3{
+  text-align: center;
+  margin-top: 90px;
+}
+/* carousel title */
+.col-2 h1 {
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 30px;
+  color: #F5F5F5;
+  margin-top: 100px;
+}
+
+.container4 {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+/* carousel container preserve 3d so element can be used in 3 dimensions  */
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+/* carousel individual boxes, position absoulute so text can be placed inside and to position boxes in right order  */
+.carousel-1 { 
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  display: flex;
+}
+/* text design in carousel */
+span2 {
+  text-align: center;
+  margin: auto;
+  font-family: Josefin Sans;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+/* carousel images and rotations. rotateY places image in circle. TranslateZ  pushes the image back and forth*/
+.slide1 {
+  background-image: url("https://cdn.fanbyte.com/wp-content/uploads/2021/04/Outriders-Tank.jpg?x71907");
+  transform: rotateY(  0deg) translateZ(430px); }
+  
+.slide2 { 
+  background-image: url("https://www.gran-turismo.com/images/c/i1r4CLxB5BAvlhH.jpg");
+    transform: rotateY( 40deg) translateZ(430px); }
+    
+.slide3 {
+  background-image: url("https://wallpapercave.com/wp/wp4437082.jpg");
+  transform: rotateY( 80deg) translateZ(430px); }
+  
+.slide4 {
+  background-image: url("https://static.techspot.com/images2/news/bigimage/2021/01/2021-01-07-image-19.jpg");
+  transform: rotateY(120deg) translateZ(430px); }
+  
+.slide5 { 
+  background-image: url("https://wallpaperaccess.com/full/842451.jpg");
+ transform: rotateY(160deg) translateZ(430px); }
+ 
+.slide6 { 
+  background-image: url("https://media.comicbook.com/2021/02/rainbow-six-siege-quarantine-2-1256581-1280x0.jpeg");
+ transform: rotateY(200deg) translateZ(430px); }
+ 
+.slide7 { 
+  background-image: url("https://images.indianexpress.com/2020/08/GothamKnights-1.jpg");
+ transform: rotateY(240deg) translateZ(430px); }
+ 
+.slide8 {
+  background-image: url("https://nerdist.com/wp-content/uploads/2020/08/Suicide-Squad-Kill-Justice-League-featured.jpg");
+  transform: rotateY(280deg) translateZ(430px); }
+  
+.slide9 {
+  background-image: url("https://assets1.ignimgs.com/2020/06/11/screen-shot-2020-06-11-at-40236-pm-1591909431230.png");
+  transform: rotateY(320deg) translateZ(430px); }
+  /* carousel infinite rotation */
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+/* button */
+.button1 {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  font-family: Quicksand;
+  color: black;
+  padding: 15px 25px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+/*  container that contains 4 consoles*/
+.container5 {
+  background-color: #fff;
+  width: 100%;
+  display:inline-block;
+}
+
+.row4 {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.col-3 h1 {
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 30px;
+  color: #1f1f1f;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+.container6 {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+/* console image container */
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  transition: .5s;
+}
+
+.box span3 {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  font-family: Questrial;
+  font-weight: lighter;
+  color: #1f1f1f;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover img {
+  width: 100%;
+  height: 100%;
+}
+
+/* social media container */
+.container7{
+  background-color: #1f1f1f;
+  width: 100%;
+  display: inline-block;
+}
+/* social media h1 design */
+.social-menu h1 {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 30px;
+  color: #ffffff;
+}
+/* social media ul align center */
+.social-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+/* social media list style design*/
+.social-menu ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social-menu ul li .fab {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fab:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+
+/* contact details */
+.container8{
+  background-color: #ffffff;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.block-parent {
+  margin-left: 50px;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.block {
+  padding: 0 50px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .column5 {
+    width: 100%;
+  }
+  
+  .card {
+    flex: 100%;
+  }
+  
+  .container2 {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 1080px){
+	.image{
+		flex: 100%;
+		max-width: 300px;
+	}
+	
+	.container2 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px){
+	.image .details p{
+		font-size: 16px;
+	}
+
+	.more .read-more, .more .icon-links a i{
+		font-size: 18px;
+	}
+	
+	.container2 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .container2 {
+    flex-direction: column;
+  }
+}
+
+
+
+      
