@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Josefin+Sans&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* slider */
+#slider1 {
+  overflow: hidden;
+}
+
+#slider1 figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider1 figure img {
+  width: 20%;
+  float: left;
+}
+/* move the slider */
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+/* navbar main, width 100% so its always across screen, position sticky so it stays on top */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px 0;
+  box-shadow: 0 2px 5px #d9d9d9;
+  font-family: 'Open Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+/* navbar text design so it has no underline*/
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+/* navbar inline */
+nav ul li {
+  display: inline-block;
+}
+/* navbar text style */
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin: 0 10px;
+}
+/* navbar transition time  */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+/* navbar hover color */
+nav ul li a:hover {
+  color:#0072CE;
+}
+/* navbar positioning so it can be moved*/
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+/* navbar blue underline animation */
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #0072CE;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+.bar {
+  width: 100%;
+  height: 100px;
+  background-color: #282829;
+}
+/* containers */
+.xbox {
+  width: 100%;
+  background-color: #107C10;
+  display:inline-block;
+}
+
+.playstation {
+  width: 100%;
+  background-color: #0072CE;
+  display:inline-block;
+}
+
+.switch {
+  width: 100%;
+  background-color: #e60012;
+  display:inline-block;
+}
+/* buttons */
+.button1 {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  font-family: Quicksand;
+  color: black;
+  padding: 15px 25px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+/* container details */
+.xbox-details {
+  text-align: center;
+  margin-top: 100px;
+}
+.xbox-details h1 {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.xbox-details p {
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #ddd;
+}
+
+.ps-details {
+  text-align: center;
+  margin-top: 100px;
+}
+.ps-details h1 {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.ps-details p {
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #ddd;
+}
+
+.switch-details {
+  text-align: center;
+  margin-top: 100px;
+}
+.switch-details h1 {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.switch-details p {
+  font-family: Questrial;
+  font-weight: lighter;
+  font-size: 24px;
+  color: #ddd;
+}
+/* image container */
+.conatiner {
+	width: 100%;
+}
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.box {
+	margin: 10px;
+	width: 200px;
+	height: 400px;
+	text-align: center;
+	border-radius: 3px;
+	transition: 200ms ease-in-out;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.box:hover {
+	box-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+.box h1 {
+  font-family: Quicksand;
+	color: #fff;
+	padding: 30px;
+	margin-top: 100px;
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+	background: rgba(0,0,0,0.8);
+	box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.date h4 {
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 3px;
+	text-shadow: 0 0 3px rgba(0,0,0,0.9);
+	margin-top: -70px;
+}
+.poster {
+	width: 130px;
+	height:130px;
+	margin: 120px auto;
+	position: relative;
+	border-radius: 100px;
+}
+.poster h4 {
+	top: 16px;
+	color: #fff;
+	position: relative;
+	font-size: 80px;
+	text-align: center;
+	font-weight: 100;
+}
+/* image urls */
+.one {
+	background: url('https://wallpaperaccess.com/full/957573.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.two {
+	background: url('https://wallpaperaccess.com/full/485812.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.three {
+	background: url('https://sm.ign.com/t/ign_nordic/news/b/blizzcon-2/blizzcon-2017-no-new-diablo-announcements-this-year_mv8b.1200.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.five {
+	background: url('https://external-preview.redd.it/BxSzZlRISCV3ap5zfwkuh5MAPaNbEWmujilw0d-U-ng.jpg?auto=webp&s=5359475446850ac0a32997ec9c25a4a44281ff60');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.six {
+	background: url('https://www.psu.com/wp/wp-content/uploads/2020/10/Marvel-Avengers-PS4-Wallpapers-15.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.seven {
+	background: url('https://cdn.wallpapersafari.com/78/8/2Gl8Fz.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.eight {
+	background: url('https://cdn.mos.cms.futurecdn.net/QQ8fz4rf6VXX7BHzzJHzMe.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.nine {
+	background: url('https://gameranx.com/wp-content/uploads/2019/09/Outriders-1080P-Wallpaper-2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.ten {
+	background: url('https://wallpaperaccess.com/full/2137451.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.eleven {
+	background: url('https://wallpaper.dog/large/5576460.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.twelve {
+	background: url('https://wallpaperaccess.com/full/1780032.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.thirteen {
+	background: url('https://images7.alphacoders.com/821/thumb-1920-821837.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+/* contact info */
+.container8{
+  background-color: #ffffff;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* contact info */
+.block-parent {
+  margin-left: 50px;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.block {
+  padding: 0 50px;
+}
+/* responsive */
+@media screen and (max-width: 1000px) {
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+ 
+    .box {
+        flex-grow: 1;
+    }
+}
