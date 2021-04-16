@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Josefin+Sans&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900');
+@font-face {
+	font-family: Arno Pro;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ArnoPro-Regular.otf);
+	font-style: normal;
+}
+@font-face {
+	font-family: Arno Pro;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ArnoPro-Italic.otf);
+	font-style: italic;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* slider */
+#slider1 {
+  overflow: hidden;
+}
+
+#slider1 figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider1 figure img {
+  width: 20%;
+  float: left;
+}
+/* move the slider */
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+/* navbar main, width 100% so its always across screen, position sticky so it stays on top */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px 0;
+  box-shadow: 0 2px 5px #d9d9d9;
+  font-family: 'Open Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+/* navbar text design so it has no underline*/
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+/* navbar inline */
+nav ul li {
+  display: inline-block;
+}
+/* navbar text style */
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  margin: 0 10px;
+}
+/* navbar transition time  */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+/* navbar hover color */
+nav ul li a:hover {
+  color:#0072CE;
+}
+/* navbar positioning so it can be moved*/
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+/* navbar blue underline animation */
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #0072CE;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+/* grey bar */
+.bar {
+  width: 100%;
+  height: 100px;
+  background-color: #282829;
+}
+/* container containing everything */
+.container {
+  background-color: #fff;
+  width: 100%;
+  display: inline-block;
+}
+/* margin on top  */
+.banner img {
+  margin-top: 100px;
+}
+/* p styling rem so its always 16 pixels unless the root is changed */
+p { 
+	font-family: Arno Pro, serif;
+	font-size: 1.2rem;
+	line-height: 1.4;
+  margin: 0;
+}
+/* p credit styling */
+p.credits {
+	font-style: italic;
+	text-indent: 0 !important;
+	margin: 1rem 0;
+}
+
+p a {
+	font-weight: bolder;
+	color: #000;
+	text-decoration: none;
+}
+
+/* column styling*/
+.multicol {
+	column-count: 4;
+	column-gap: 2rem;
+}
+.multicol + img {
+	margin: 2rem 0;
+}
+article {
+	width: 80%;
+	margin: 0 auto 4rem;
+}
+article img {
+	width: 100%;
+}
+article header {
+	margin-bottom: 2.5rem;
+	padding-bottom: 4rem;
+	border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+article h1 {
+	margin-top: 0;
+	font-size: 3rem;
+}
+article h2 {
+	break-after: column;
+	font-size: 1.5rem;
+}
+h1, h2 {
+	font-family: Lato, sans-serif;
+}
+
+.container8{
+  background-color: #ffffff;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.block-parent {
+  margin-left: 50px;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.block {
+  padding: 0 50px;
+}
+
+/* responsive*/
+
+/* reduces to 3 columns*/
+@media all and (max-width: 1600px) {
+	.multicol {
+		column-count: 3;
+	}
+}
+/* reduces to 2 columns*/
+@media all and (max-width: 1000px) {
+	.multicol {
+		column-count: 2;
+	}
+}
+/*  break after specifies whether or not a page break, column break, or region break should occur after the specified element.*/
+@media all and (max-width:800px) {
+	article h2 {
+		break-after: avoid;
+	}
+	.multicol {
+		column-count: 1;
+	}
+}
+
+@media all and (max-width:600px) {
+	body {
+		margin: 0;
+	}
+	article {
+		width: 100%;
+	}
+	.multicol {
+		padding: 0 1rem;
+	}
+	article header {
+		margin-bottom: 2.5rem;
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+}
